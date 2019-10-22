@@ -9,7 +9,7 @@
               <li class="logo">
                 <img src="@/assets/logo.png" />
               </li>
-              <li>
+              <li class="callBtnArea">
                 <input type="text" placeholder="전화번호 입력" />
                 <div class="callBtns">
                   <span class="call">
@@ -20,8 +20,37 @@
                   </span>
                 </div>
               </li>
-              <li>menu 2</li>
-              <li>menu 3 길다 길어</li>
+              <li>
+                <div class="callStatusArea">
+                  <div class="timer">
+                    <span>상담 대기중</span>
+                    02 : 26 : 54
+                  </div>
+                  <div class="btns">
+                    <div class="callOn">상담대기</div>
+                    <ul>
+                      <li>자리비움</li>
+                      <li>작업</li>
+                      <li>식사</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="callStats">
+                  <ul>
+                    <li>
+                      인입
+                      <span>2</span>
+                    </li>
+                    <li>발신</li>
+                  </ul>
+                  <ul>
+                    <li>콜백</li>
+                    <li>대기</li>
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -182,7 +211,7 @@ header {
   float: left;
   margin-right: 30px;
   height: 80px;
-  line-height: 80px;
+  /* line-height: 80px; */
   /* background-color: antiquewhite; */
 }
 
