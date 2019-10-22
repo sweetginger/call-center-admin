@@ -51,5 +51,17 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "description": "```\r yarn install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweetginger/call-center-admin.git"
+  },
+  "author": "hyr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sweetginger/call-center-admin/issues"
+  },
+  "homepage": "https://github.com/sweetginger/call-center-admin#readme"
 }
