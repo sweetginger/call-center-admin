@@ -27,7 +27,6 @@
                     <span class="primary">02 : 26 : 54</span>
                   </div>
                   <div class="btns">
-                    <!-- <div class="callOn">상담대기</div> -->
                     <ul class="callOn">
                       <li>상담대기</li>
                     </ul>
@@ -510,7 +509,6 @@ header {
 }
 
 .gnb {
-  /* float: right; */
   padding: 10px 0;
   height: 100px;
   box-sizing: border-box;
@@ -522,18 +520,12 @@ header {
   float: left;
   margin-right: 30px;
   height: 80px;
-  /* line-height: 80px; */
-  /* background-color: antiquewhite; */
 }
 
 .gnb:after {
   content: "";
   display: block;
   clear: both;
-  /*
-    가상요소 :before, :after 를 사용한 float 초기화
-    요소에 clearfix 라는 클래스를 추가하여 사용하기도 함
-    */
 }
 
 /* contents */
@@ -543,13 +535,6 @@ section#contents {
 }
 
 section#contents section {
-  /* flex: 1 1 0; */
-  /*
-    가장 기본 , flex-grow 증가너비 / flex-shrink 감소너비  / flex-basis 기본너비
-    flex-basis 의 기본값은 auto 이지만 단축속성에서 사용할 경우 0 적용
-    flex:1; = flex:1 1; = flex:1 1 0;
-    가변너비가 아니거나 값이 0일 경우 효과가 없음!
-    */
   height: 100%;
 }
 
@@ -561,7 +546,6 @@ section#contents nav {
 
 #nav {
   height: 100%;
-  /* background-color: rgb(150, 149, 149); */
   border-right: 1px solid #ddd;
 }
 
@@ -587,21 +571,9 @@ section#contents nav {
   text-align: center;
   margin-right: 10px;
 }
-/*
-.list-item:nth-child(2n) {
-  background-color: darkorchid;
-}
-*/
 .list-item:last-child {
   margin-bottom: 0;
 }
-/*
-.list-item:before {
-  content: "가상요소";
-  display: inline-block;
-  font-size: 10px;
-}
-*/
 .list-item span {
   color: white;
 }
@@ -626,8 +598,6 @@ div.section {
   text-align: center;
   border-collapse: collapse;
   margin: auto;
-  /* padding: 0 2%; */
-  /* table-layout: fixed; */
 }
 
 #section1 table th {
@@ -638,20 +608,9 @@ div.section {
   font-weight: 500;
 }
 
-#section1 table tr {
-  /* background-color: seagreen; */
-}
-
-#section1 table td:not(:last-child) {
-  /* background-color: skyblue; */
-}
-
 #section2 {
-  /* background-color: khaki; */
   flex: none;
-  /* background: khaki url("/assets/img/dog.jpg") no-repeat center; */
   background-size: cover;
-  /* width: 100%; */
   width: 200px;
   border-left: 1px solid #ddd;
 }
@@ -663,8 +622,6 @@ footer {
 }
 
 #footer {
-  /* 텍스트를 가운데 위치하도록 하기 */
-  /* background-color: #ddd; */
   height: 50px;
   text-align: center;
   line-height: 50px;
@@ -727,16 +684,13 @@ input[type="text"] {
   float: none;
   height: 24px;
   margin: 2px;
-  /* background: #ddd; */
 }
 .callStatusArea .workStatus {
   background: #ddd;
-  /* border-radius: 5px; */
 }
 .callStatusArea .workStatus li {
   font-size: 12px;
   line-height: 24px;
-  /* border-top: 1px solid #fff; */
   border-bottom: 1px solid #efefef;
 }
 .callStatusArea .workStatus li:first-child {
@@ -797,20 +751,15 @@ input[type="text"] {
   height: 35px;
   line-height: 35px;
   margin: 0 2%;
-  /* border-bottom: 1px solid #ddd; */
 }
 #section2 .tabArea ul li {
   float: left;
   width: 50%;
   font-size: 14px;
-  /* margin: 0 2%; */
   border-bottom: 1px solid #bbb;
   color: #bbb;
 }
 #section2 .tabArea ul li.active {
-  /* border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd; */
   border: 1px solid #bbb;
   border-bottom: none;
   color: #000;
@@ -819,21 +768,16 @@ input[type="text"] {
   height: 35px;
   line-height: 35px;
   margin: 0 1%;
-  /* border-bottom: 1px solid #ddd; */
 }
 #section1 .tabArea ul li {
   float: left;
   width: 20%;
   font-size: 14px;
-  /* margin: 0 2%; */
   border-bottom: 1px solid #bbb;
   color: #bbb;
   text-align: center;
 }
 #section1 .tabArea ul li.active {
-  /* border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd; */
   border: 1px solid #bbb;
   border-bottom: none;
   color: #000;
@@ -979,13 +923,11 @@ select option {
 .infoBox .callMemo input[type="checkbox"] {
   width: 14px;
   height: 14px;
-  /* line-height: 30px; */
   vertical-align: middle;
   margin-right: 5px;
 }
 .infoBox .callMemo .textMemo {
   height: 90px;
-  /* line-height: 90px; */
 }
 .infoBox .callMemo .saveBtn {
   height: 83px;
