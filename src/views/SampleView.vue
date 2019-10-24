@@ -137,7 +137,13 @@
                 class="numberInfo"
                 style="width: 500px; height: 150px;float: left; padding: 0 15px;"
               >
-                <div class="title">수신 정보</div>
+                <div class="title">
+                  수신 정보
+                  <ul class="horizon">
+                    <li>SMS발송</li>
+                    <li>상담이관</li>
+                  </ul>
+                </div>
                 <ul class="horizon" style>
                   <li>
                     <div class="userLevel">일반</div>
@@ -171,10 +177,6 @@
                 <ul class="callDepth horizon">
                   <li>해외항공</li>
                   <li>> 결제시한문의</li>
-                </ul>
-                <ul class="horizon">
-                  <li>SMS발송</li>
-                  <li>상담이관</li>
                 </ul>
               </div>
             </div>
@@ -250,18 +252,8 @@
             <div class="infoBox">
               <div class="tabArea">
                 <ul>
-                  <li
-                    :class="{ active: content.tab == 1 }"
-                    @click="changeTab('content', 1)"
-                  >
-                    고객정보
-                  </li>
-                  <li
-                    :class="{ active: content.tab == 2 }"
-                    @click="changeTab('content', 2)"
-                  >
-                    상담이력
-                  </li>
+                  <li :class="{ active: content.tab == 1 }" @click="changeTab('content', 1)">고객정보</li>
+                  <li :class="{ active: content.tab == 2 }" @click="changeTab('content', 2)">상담이력</li>
                   <li style="width: 60%; height: 36px;" />
                 </ul>
               </div>
@@ -326,18 +318,8 @@
             <div class="title">나의 상담목록</div>
             <div class="tabArea">
               <ul>
-                <li
-                  :class="{ active: nav.right.tab == 1 }"
-                  @click="changeTab('right', 1)"
-                >
-                  최근 수발신
-                </li>
-                <li
-                  :class="{ active: nav.right.tab == 2 }"
-                  @click="changeTab('right', 2)"
-                >
-                  콜백
-                </li>
+                <li :class="{ active: nav.right.tab == 1 }" @click="changeTab('right', 1)">최근 수발신</li>
+                <li :class="{ active: nav.right.tab == 2 }" @click="changeTab('right', 2)">콜백</li>
               </ul>
             </div>
             <div class="tab tab1" v-if="nav.right.tab == 1">
@@ -345,11 +327,7 @@
                 <option>전체 (5)</option>
               </select>
               <div class="searchBarArea">
-                <input
-                  class="userSearch"
-                  type="text"
-                  placeholder="고객명 전화번호 검색"
-                />
+                <input class="userSearch" type="text" placeholder="고객명 전화번호 검색" />
                 <i class="fas fa-search"></i>
               </div>
               <ul>
@@ -390,11 +368,7 @@
                 <option>전체 (5)</option>
               </select>
               <div class="searchBarArea">
-                <input
-                  class="userSearch"
-                  type="text"
-                  placeholder="고객명 전화번호 검색"
-                />
+                <input class="userSearch" type="text" placeholder="고객명 전화번호 검색" />
                 <i class="fas fa-search"></i>
               </div>
               <ul>
@@ -473,7 +447,7 @@ export default {
 </script>
 
 <style scoped>
-@charset "utf-8";
+/* @charset "utf-8"; */
 
 * {
   margin: 0;
@@ -851,8 +825,10 @@ select option {
 }
 
 .userInfo .blackFlag {
-  width: 200px;
+  width: 180px;
   text-align: center;
+  height: 50px;
+  line-height: 50px;
 }
 .userInfo .blackFlag img {
   width: 50px;
@@ -868,6 +844,12 @@ select option {
   margin-right: 20px;
   height: 35px;
   line-height: 35px;
+}
+#section1 .title ul.horizon {
+  float: right;
+}
+#section1 .title ul.horizon li {
+  line-height: 20px;
 }
 #section1 .numberInfo .callBtn {
   float: right;
@@ -912,6 +894,7 @@ select option {
 }
 #section1 .infoBox .subTitle {
   padding: 30px 0 15px 20px;
+  font-weight: 600;
 }
 .infoBox .callMemo {
   text-align: left;
